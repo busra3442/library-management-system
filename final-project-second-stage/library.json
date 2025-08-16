@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Andersen's Fairy Tales",
+        "authors": "Hans Christian Andersen",
+        "isbn": "0451529375"
+    },
+    {
+        "title": "Fantastic Mr. Fox",
+        "authors": "Roald Dahl",
+        "isbn": "9780140328721"
+    },
+    {
+        "title": "Kentervil'skoe prividenie",
+        "authors": "Oscar Wilde",
+        "isbn": "9854000087"
+    },
+    {
+        "title": "Demiryolu Cocuklari",
+        "authors": "Edith Nesbit",
+        "isbn": "6053045039"
+    }
+]
