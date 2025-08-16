@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Kentervil'skoe prividenie",
+        "authors": "Oscar Wilde",
+        "isbn": "9854000087"
+    },
+    {
+        "title": "The Fellowship of the Ring",
+        "authors": "J.R.R. Tolkien",
+        "isbn": "9789753421638"
+    },
+    {
+        "title": "Fantastic Mr. Fox",
+        "authors": "Roald Dahl",
+        "isbn": "9780140328721"
+    },
+    {
+        "title": "Vander's Human Physiology",
+        "authors": "Eric Widmaier, Hershel Raff, Kevin Strang",
+        "isbn": "9781259294099"
+    },
+    {
+        "title": "Andersen's Fairy Tales",
+        "authors": "Hans Christian Andersen",
+        "isbn": "0451529375"
+    }
+]
