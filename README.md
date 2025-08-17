@@ -159,7 +159,7 @@ final-project-third-stage/
 - Pytest → Test senaryoları
 ---
 
-## ⚙️ Projenin 2.Aşamasının Kurulumu ve Çalıştırılması
+## ⚙️ Projenin 3.Aşamasının Kurulumu ve Çalıştırılması
 - git clone https://github.com/busra3442/library-management-system.git
 - cd library-management-system/final-project-third-stage
 - pip install -r requirements.txt
