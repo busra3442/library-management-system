@@ -25,7 +25,7 @@ Amaç, Nesne Yönelimli Programlama (OOP) prensiplerini kullanarak terminalde ç
 ## 📂 Proje Yapısı
 
 ```bash
-library-app/
+final-project-first-stage/
 │
 ├── book.py             # Book sınıfı (kitap nesnesi tanımı)
 ├── library.py          # Library sınıfı (kütüphane yönetimi)
@@ -75,7 +75,7 @@ Aşama 2’de kullanıcı **sadece ISBN numarasını** girecek, kitap bilgileri 
 ## 📂 Proje Yapısı
 
 ```bash
-library-app/
+final-project-second-stage/
 ├── book.py             # Book sınıfı (kitap nesnesi tanımı)
 ├── library.py          # Library sınıfı (kütüphane yönetimi + OpenLibrary API entegrasyonu)
 ├── main.py             # Terminal uygulaması (ISBN ile kitap ekleme)
@@ -109,6 +109,68 @@ library-app/
 ✍️ **Not:** Aşama 2’de kitap ekleme işlemi artık ISBN tabanlı API entegrasyonu ile yapılmaktadır.  
 Aşama 1’in tüm işlevleri aynı şekilde çalışmaya devam eder.
 
+# 📚 Python 202 Bootcamp - Aşama 3: FastAPI ile Kendi API’nizi Oluşturma
+
+Bu proje, **Global AI Hub Python 202 Bootcamp** kapsamında geliştirilen kütüphane uygulamasının **üçüncü aşamasıdır**.  
+Amaç, terminalde çalışan uygulamanın mantığını bir **web servisi (API)** haline getirerek kitap verilerine HTTP istekleri üzerinden erişim sağlamaktır.  
+
+---
+
+## 🚀 Özellikler
+- **GET /books** → Kütüphanedeki tüm kitapların listesini JSON olarak döndürür  
+- **POST /books** → ISBN alır, OpenLibrary API’den bilgileri çeker ve kitabı ekler  
+- **DELETE /books/{isbn}** → ISBN’e göre kitabı kütüphaneden siler  
+- **FastAPI** sayesinde otomatik dokümantasyon `/docs` altında erişilebilir  
+
+---
+
+## 📂 Proje Yapısı
+
+```bash
+final-project-third-stage/
+├── api.py              # FastAPI uygulaması
+├── book.py             # Book sınıfı
+├── library.py          # Library sınıfı (kitap yönetimi + API entegrasyonu)
+├── main.py             # Terminal uygulaması (önceki aşamalardan)
+├── library.json        # Kitap verilerinin saklandığı dosya
+├── requirements.txt    # Bağımlılıklar (fastapi, uvicorn, httpx)
+├── test_api.py         # API endpoint testleri
+├── test-isbn.py        # ISBN testleri
+├── test_library.py     # Library sınıfı testleri
+├── tests.py            # Genel testler
+├── test.json           # Test için örnek JSON
+└── test_library.json   # Test için sahte JSON
+```
+---
+
+## 🛠 Kullanılan Teknolojiler
+- Python 3.9+ → Ana programlama dili
+
+- FastAPI → Web API geliştirme
+
+- Uvicorn → FastAPI sunucusu çalıştırma
+
+- httpx → OpenLibrary API çağrıları
+
+- Pydantic → Veri modelleri
+
+- JSON → Kitap verilerini saklama
+
+- Pytest → Test senaryoları
+---
+
+## ⚙️ Projenin 2.Aşamasının Kurulumu ve Çalıştırılması
+- git clone https://github.com/busra3442/library-management-system.git
+- cd library-management-system/final-project-third-stage
+- pip install -r requirements.txt
+- uvicorn api:app --reload # api sunucusunu başlatır
+- Sunucu çalıştığında şu adrese gidin:
+👉 http://127.0.0.1:8000/docs
+Buradan tüm endpoint’leri interaktif olarak test edebilirsiniz.
+- pytest test_api.py
+---
+✍️ Not: Bu aşamada, Aşama 1 ve 2’nin tüm işlevleri korunur.
+Ekstra olarak, uygulamamız artık web tabanlı bir API üzerinden kullanılabilir hale gelir.
 
 
 
