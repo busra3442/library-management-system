@@ -44,10 +44,73 @@ library-app/
 - python main.py # terminalde uygulama başlatılır
 - pytest tests.py # testlerin çalıştırılması 
 
-
+---
 ## 🖥️ Örnek Çıktı 
 <img width="360" height="577" alt="ekran-1" src="https://github.com/user-attachments/assets/ecd96702-99a9-47d1-9f6a-48c01fc69a3e" /> 
 <hr/>
 <img width="364" height="428" alt="ekran-3" src="https://github.com/user-attachments/assets/19fb2637-c320-4ef2-8566-2d470375d139" /> 
 <hr/>
 <img width="368" height="571" alt="ekran-2" src="https://github.com/user-attachments/assets/30193cea-2681-4b7f-997f-9f92f015f585" />
+
+# 📚 Python 202 Bootcamp - Aşama 2: Harici API ile Veri Zenginleştirme
+
+Bu proje, **Global AI Hub Python 202 Bootcamp** kapsamında geliştirilen kütüphane uygulamasının **ikinci aşamasıdır**.  
+Amaç, mevcut terminal uygulamasını bir **harici API (OpenLibrary)** ile entegre ederek kitap bilgilerini otomatik olarak zenginleştirmektir.  
+
+Aşama 1’de kullanıcı kitap eklerken **başlık, yazar ve ISBN** bilgilerini manuel giriyordu.  
+Aşama 2’de kullanıcı **sadece ISBN numarasını** girecek, kitap bilgileri **OpenLibrary API**’den çekilecektir.  
+
+---
+
+## 🚀 Özellikler
+- ISBN ile kitap ekleme (OpenLibrary API’den başlık ve yazar bilgilerini çekme)  
+- Kitap silme  
+- Kütüphanedeki tüm kitapları listeleme  
+- ISBN ile kitap arama  
+- Verilerin **JSON dosyasında (library.json)** saklanması  
+- Hata yönetimi (geçersiz ISBN veya internet bağlantısı yoksa kullanıcı bilgilendirilir)  
+
+---
+
+## 📂 Proje Yapısı
+
+```bash
+library-app/
+├── book.py             # Book sınıfı (kitap nesnesi tanımı)
+├── library.py          # Library sınıfı (kütüphane yönetimi + OpenLibrary API entegrasyonu)
+├── main.py             # Terminal uygulaması (ISBN ile kitap ekleme)
+├── library.json        # Gerçek kütüphane verilerinin saklandığı JSON dosyası
+├── test.json           # Testler için kullanılan örnek JSON dosyası
+├── test_library.json   # Testler için kullanılan sahte kütüphane dosyası
+├── test_library.py     # Library sınıfı için testler
+├── test-isbn.py        # ISBN üzerinden API’den kitap çekme testleri
+├── tests.py            # Genel pytest testleri
+├── requirements.txt    # Bağımlılık listesi (httpx eklenmiştir)
+```
+---
+## 🛠 Kullanılan Teknolojiler
+
+- Python 3.9+ → Ana programlama dili
+
+- httpx → OpenLibrary API’den veri çekmek için
+
+- JSON → Kitap verilerini saklamak için
+
+- Pytest → Test senaryoları
+
+---
+## ⚙️ Projenin 2.Aşamasının Kurulumu ve Çalıştırılması
+- git clone https://github.com/busra3442/library-management-system.git
+- cd library-management-system/final-project-second-stage
+- pip install -r requirements.txt # Bu aşamada httpx kütüphanesi gereklidir requirements.txt dosyasında listelenmiştir
+- python main.py
+- pytest
+---
+✍️ **Not:** Aşama 2’de kitap ekleme işlemi artık ISBN tabanlı API entegrasyonu ile yapılmaktadır.  
+Aşama 1’in tüm işlevleri aynı şekilde çalışmaya devam eder.
+
+
+
+
+
+
